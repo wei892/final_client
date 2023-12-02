@@ -23,7 +23,7 @@ const AllCampusesView = (props) => {
         {props.allCampuses.map((campus) => (
           <div className="CampusCard" key={campus.id}>
             <div className="campusPic">
-              <img src={campus.imageUrl}/>
+              <img src={campus.imageUrl} alt="School's campus"/>
             </div>
             <Link to={`/campus/${campus.id}`}>
               <h2>{campus.name}</h2>
