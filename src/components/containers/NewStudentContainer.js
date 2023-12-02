@@ -23,6 +23,7 @@ class NewStudentContainer extends Component {
       campusId: null, 
       email: "",
       gpa: 0,
+
       redirect: false, 
       redirectId: null
     };
@@ -44,8 +45,9 @@ class NewStudentContainer extends Component {
         lastname: this.state.lastname,
         campusId: this.state.campusId,
         email: this.state.email,
-        gpa: this.state.gpa
-    };
+        gpa: this.state.gpa,
+
+      };
     
     // Add new student in back-end database
     let newStudent = await this.props.addStudent(student);
@@ -57,6 +59,7 @@ class NewStudentContainer extends Component {
       campusId: null,
       email: "",
       gpa: 0.00,
+
       redirect: true, 
       redirectId: newStudent.id
     });
