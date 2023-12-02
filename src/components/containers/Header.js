@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
     fontType: 'bold',
     fontFamily: 'sans-serif', 
     fontSize: '35px', 
-    color: 'darkblue'
+    color: 'darkblue',
+    padding: "10px"
   },
   appBar:{
     backgroundColor: '#fcb6bb',
@@ -33,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   greeting:{
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     width: "50%",
     margin: "auto",
   },
