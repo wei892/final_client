@@ -1,0 +1,52 @@
+hr{
+    margin: 5px 20px;
+}
+
+.studentCont{
+    display: flex;
+    margin: 20px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.campusImg{
+    width: 100%;
+    height: 500px;
+}
+
+.studentCard{
+    width: 500px;
+    margin: 10px;
+    height: 250px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: solid black 2px;
+    display: flex;
+    align-items: center;
+}
+
+.cardLeft{
+    width: 50%;
+    height: 95%;
+    justify-self: center;
+    margin-right: 20px;
+}
+.studentIcon{
+    width: 100%;
+}
+
+.cardRight{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    text-align: left;
+    justify-content: center;
+    width: 50%;
+}
+
+h4, p{
+    line-height: 2px;
+}
+
