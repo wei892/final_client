@@ -20,7 +20,10 @@ const AllCampusesView = (props) => {
       <h1>All Campuses</h1>
 
       <div className="campusCardCont">
-        {props.allCampuses.map((campus) => (
+        {props.allCampuses.length === 0 ? 
+        <h2> No Campus Information Available </h2> 
+        : 
+        props.allCampuses.map((campus) => (
           <div className="CampusCard" key={campus.id}>
             <div className="campusPic">
               <img src={campus.imageUrl} alt="School's campus"/>
@@ -37,7 +40,7 @@ const AllCampusesView = (props) => {
 
       <br></br>
 
-      <Link to={`/`}>
+      <Link to={`/newcampus`}>
         <button>Add New Campus</button>
       </Link>
       <br/><br/>
