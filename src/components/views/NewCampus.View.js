@@ -43,7 +43,7 @@ const NewCampusView = (props) => {
             
           <div className={classes.formTitle}>
             <Typography style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>
-              Add a Student
+              Add a Campus
             </Typography>
           </div>
 
