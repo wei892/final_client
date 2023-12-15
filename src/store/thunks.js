@@ -7,21 +7,6 @@ import * as ac from './actions/actionCreators';  // Import Action Creators ("ac"
 // const axios = require('axios');
 import axios from 'axios';
 
-/*
-All thunks created:
-//Campuses
-Y: fetchAllCampusesThunk
-Y: fetchCampusThunk
-N: editCampusThunk
-N: deleteCampusThunk
-
-Y: fetchAllStudentsThunk
-Y: addStudentThunk
-
-
-*/
-
-
 //All Campuses
 // THUNK CREATOR:
 export const fetchAllCampusesThunk = () => async (dispatch) => {  // The THUNK
@@ -65,6 +50,15 @@ export const editCampusThunk = campus => async dispatch => {  // The THUNK
     let updatedCampus = await axios.put(`http://localhost:5001/api/campuses/${campus.id}`, campus); 
     // Update successful so change state with dispatch
     dispatch(ac.editCampus(updatedCampus));
+
+// Delete Campus
+// THUNK CREATOR:
+export const deleteCampusThunk = campus => async dispatch => {  // The THUNK
+  try {
+    // API "delete" call to delete campus (based on "campus") from database
+    await axios.delete(`/api/campuses/${campus}`);  
+    // Delete successful so change state with dispatch
+    dispatch(ac.deleteCampus(campus));
   } catch(err) {
     console.error(err);
   }
