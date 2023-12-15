@@ -51,7 +51,7 @@ class EditCampusContainer extends Component {
         };
 
         //edit campus in backend
-        //let newCampus = await this.props.editCampus(edit_campus);
+        let newCampus = await this.props.editCampus(edit_campus);
         console.log(this.props.campus.id);
 
         //update the state
@@ -97,7 +97,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
     return {
       fetchCampus: (id) => dispatch(fetchCampusThunk(id)),
-      editCampus: (id) => dispatch(editCampusThunk(id)),
+      editCampus: (campus) => dispatch(editCampusThunk(campus)),
     };
 };
 

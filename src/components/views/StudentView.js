@@ -21,6 +21,9 @@ const StudentView = (props) => {
 
       <p>Email: {student.email}</p>
       <p>GPA: {student.gpa === null ? Number(0).toFixed(2) : Number(student.gpa).toFixed(2)}</p>
+      <Link to={`/editstudent/${student.id}`}>
+        <button>Edit Student</button>
+      </Link>
     </div>
   );
 
