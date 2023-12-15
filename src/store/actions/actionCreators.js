@@ -28,6 +28,13 @@ export const addCampus = (campus) => {
   };
 };
 
+export const editCampus = (campus) => {
+  return {
+    type: at.EDIT_CAMPUS,
+    payload: campus,
+  }
+}
+
 export const deleteCampus = (campus) => {
   return {
     type: at.DELETE_CAMPUS,
@@ -56,7 +63,6 @@ export const deleteStudent = (studentId) => {
     payload: studentId,
   };
 };
-
 
 export const editStudent = (student) => {
   return {

@@ -8,14 +8,16 @@ import { Link } from "react-router-dom";
 import "../styling/CampusView.css"
 
 // Take in props data to construct the component
+
 const CampusView = (props) => {
   const {campus} = props;
-  
+  console.log(campus);
   // Render a single Campus view with list of its students
   // console.log(campus.students.gpa)
   return (
     <div>
       <img src={campus.imageUrl} alt="school campus" className="campusImg"/>
+      
       <h1>{campus.name}</h1>
       <p>{campus.address}</p>
       <p>{campus.description}</p>
@@ -49,7 +51,9 @@ const CampusView = (props) => {
           );
         })}
       </div>
-      
+      <Link to={`/editcampus/${campus.id}`}>
+        <button>Edit Campus</button>
+      </Link>
     </div>
   );
 };

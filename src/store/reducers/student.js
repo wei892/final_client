@@ -9,7 +9,7 @@ import { FETCH_STUDENT } from "../actions/actionTypes";  // Import Action Type
 
 // Define default Initial state
 const initialState = {
-  campus: {},  // Empty object
+  student: {},  // Empty object
 };
 
 // REDUCER:
