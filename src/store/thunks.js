@@ -50,6 +50,11 @@ export const editCampusThunk = campus => async dispatch => {  // The THUNK
     let updatedCampus = await axios.put(`http://localhost:5001/api/campuses/${campus.id}`, campus); 
     // Update successful so change state with dispatch
     dispatch(ac.editCampus(updatedCampus));
+  }
+  catch(err){
+  console.log(err)
+  }
+};
 
 // Delete Campus
 // THUNK CREATOR:
